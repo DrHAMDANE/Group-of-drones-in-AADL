@@ -1,0 +1,116 @@
+----------------------- © Dr. Mohamed Elkamel HAMDANE & Mme Meriem BOUDROUAZ & Mme Ines BRELLA ------------------
+------------------------------------------------hamdane(dot)mohamed(at)ensc(dot)dz-------------------------------
+--------------------------------------------Computer science IFA Department-------------------------------------- 
+--------------------------------------AbdElhamid Mehri University of Constantine 2-------------------------------
+-------------------------------------------------------Algeria---------------------------------------------------
+---------------------------------------------------------2021----------------------------------------------------
+package Drone
+public
+	with Software,Hardware,data_pkg;
+	
+	system main_sys
+		features
+	    position:  in out event data port data_pkg::Position;
+	    Zposition:  in event data port data_pkg::Position;
+		cnnect:in out event port ;
+		ready:in out event port;
+		signal: in out event data port;
+		camera_sensor: in out event data port data_pkg::video;
+		missionFailed: in out event port;
+		missionSuccess: in out  event  port;
+	modes
+			initialization:initial mode;
+			flying:mode;
+			completedMissionFailed: mode;
+			completedMissionSuccess: mode;
+end main_sys;
+
+	system implementation main_sys.impl
+	subcomponents
+		this_control_cpu: processor Hardware::cpu.impl;
+		this_dist_cpu: processor Hardware::cpu.impl;
+		this_pos_cpu: processor Hardware::cpu.impl;
+		
+	
+		this_net: bus Hardware::net;
+
+		the_control: process Software :: control_vol.impl;
+		this_Position_sensor: device Hardware::Position_sensor;
+		this_orientation_sensor: device Hardware::orientation_sensor;
+		this_engine: device Hardware::engine;
+		this_sprinklers: device Hardware :: sprinklers;
+		this_camera: device Hardware:: camera;
+		this_light: device Hardware :: light;
+		this_propellers: device Hardware::propellers;
+		this_distance_sensor: device Hardware:: dist_sensor;
+		
+
+	connections
+		--connexion entre control de vol et gps "position sensor, mpu et moteur initialisation--
+		cnx1: port the_control.ordre_init_out -> this_Position_sensor.ordre_init_in in modes(flying) ;
+		cnx2: port the_control.ordre_init_out -> this_orientation_sensor.ordre_init_in in modes(flying);
+		cnx3: port the_control.ordre_init_out -> this_engine.ordre_init_in in modes(flying);
+		--test de signal
+		cnx4: port   signal  -> the_control.signal ;
+		--la présence de signal
+		cnx7: port the_control.signal -> this_light.reply_signal_in in modes(flying)  ;
+		--recoi donnéé
+		cnx: port  the_control.pos_in -> position  ;
+		cnxx: port Zposition -> the_control.Zpos_in ;
+		cnx8: port this_Position_sensor.pos -> the_control.pos_in ;
+		cnx9: port this_orientation_sensor.or_out -> the_control.orientation ;
+		cnx10: port this_distance_sensor.dist -> the_control.dist ;
+		--start engine
+		cnx11: port the_control.commande_out -> this_engine.commande_in ;
+		--tester composant
+		cnx12: port cnnect -> the_control.test_ready_in;
+		cnx13:port  the_control.ready_compos_in ->  ready;
+		cnx14:port the_control.NotReady_in -> cnnect;	
+		--les composants sont prait donc fly
+		cnx15: port the_control.ready_compos_in -> this_propellers.ready_compos_in;
+		-- la position de zone et gps se sont les meme
+		cnx16: port the_control.verif_area_yes_out -> this_sprinklers.sprinklers_sensor_in;
+		cnx17:port the_control.verif_area_yes_out -> this_camera.camera_sensor_in;
+		cnx18: port this_camera.camera_sensor_out -> the_control.camera_sensor_out;
+		cnx19: port the_control.camera_sensor_out -> camera_sensor;
+		-- la position de GPS est meme avec zone position
+		cnx20: port the_control.verif_area_yes_out -> this_propellers.rest_fly_in in modes(flying); 	
+		-- fait la mission
+		cnx21: port this_sprinklers.sprinklers_sensor_out -> the_control.desinfection_area_in in modes(flying);		
+		--test sur reservoir
+		cnx22: port the_control.check_tank_NotEmpty_out -> the_control.desinfection_area_in in modes(flying);
+		cnx23: port the_control.obst_out -> this_engine.obs_in;
+        cnx24:port this_orientation_sensor.or_out->the_control.orientation;
+        
+        
+        
+        
+        cnx29: port the_control.signal  -> missionSuccess in modes(completedMissionSuccess);
+        cnx30: port the_control.check_tank_empty_out  -> missionSuccess in modes(completedMissionSuccess);
+        cnx31: port the_control.signal  -> missionFailed in modes(completedMissionFailed);
+        cnx33: port  the_control.verif_area_no_out -> cnnect in modes(completedMissionFailed);
+        
+        
+		cnx28: bus access this_net <-> this_control_cpu.net_access;
+		cnx25: bus access this_pos_cpu.net_access -> this_net;
+		cnx26: bus access this_dist_cpu.net_access -> this_net;
+		
+
+	modes
+		started: initialization -[ready]-> flying;
+		flying -[the_control.signal]-> completedMissionFailed;
+		flying -[the_control.check_tank_empty_out]-> completedMissionSuccess;
+		flying -[the_control.signal]-> completedMissionSuccess;
+
+		
+	properties
+		Deployment_properties::Actual_Processor_Binding => (reference (this_control_cpu.runtime2)) applies to the_control;
+		Deployment_properties::Actual_Processor_Binding => (reference (this_dist_cpu.runtime1)) applies to this_distance_sensor;
+		Deployment_properties::Actual_Processor_Binding => (reference (this_pos_cpu.runtime1)) applies to this_Position_sensor;
+		--Actual_Connection_Binding => (inherit list of reference (this_control_cpu, this_dist_cpu , this_pos_cpu, this_net));
+
+end main_sys.impl;
+		
+
+	
+end Drone;

@@ -1,0 +1,350 @@
+----------------------- © Dr. Mohamed Elkamel HAMDANE & Mme Meriem BOUDROUAZ & Mme Ines BRELLA ------------------
+------------------------------------------------hamdane(dot)mohamed(at)ensc(dot)dz-------------------------------
+--------------------------------------------Computer science IFA Department-------------------------------------- 
+--------------------------------------AbdElhamid Mehri University of Constantine 2-------------------------------
+-------------------------------------------------------Algeria---------------------------------------------------
+---------------------------------------------------------2021----------------------------------------------------
+package Software
+public
+	 with data_pkg;
+	 
+	thread obstacle_detection 
+		features
+			dist_in: in data port data_pkg::distance;
+			obst_out: out data port data_pkg::obstacle_detected;
+	end obstacle_detection;
+	
+	thread implementation obstacle_detection.impl
+		 properties
+            Dispatch_Protocol => Periodic;
+			Period => 200 ms;
+			Deadline =>200 ms;
+			Source_Name => "obstacle" applies to obst_out;
+	end obstacle_detection.impl;
+
+	--tester le signal si perdu ou non
+	
+	thread signal_monitor_station
+		features
+			reply_signal: in out event data port;
+	end signal_monitor_station;
+	
+	
+	thread implementation signal_monitor_station.impl
+		properties
+			Dispatch_Protocol => Sporadic;
+			Deadline =>100 ms;
+			period => 100 ms;
+		annex behavior_th1{**
+			variables c: Base_Types :: integer;
+			variables b: Base_Types :: boolean ;
+		    
+			S0: initial state;
+			S1: state;
+			S0 [reply_signal?c]->S0; -- recoi signal
+			S0 [if c< 5 then b := false;  reply_signal! b  ] -> S1; 
+		**};	
+			
+			
+			
+	end signal_monitor_station.impl;
+	
+	
+	
+	thread signal_monitor_control
+		features
+			reply_signal: in out event data port;
+	end signal_monitor_control;
+	
+	
+	thread implementation signal_monitor_control.impl
+		properties
+			Dispatch_Protocol => Sporadic;
+			Deadline =>100 ms;
+			period => 100 ms;
+		annex behavior_th1{**
+			variables c: Base_Types :: integer;
+			variables b: Base_Types :: boolean ;
+			c:=2;
+			 
+			S0: initial complete state;
+			S0 [reply_signal!c]->S0; -- envoy signal
+		**};
+		
+	end signal_monitor_control.impl;
+	
+	--tester si les composant de drone sont prait
+	thread ready_composants 
+		features
+			test_ready_in: in event port;
+			NotReady_out: out event port;
+			ready_compos_out: out event port;
+		
+	end ready_composants;
+	thread implementation ready_composants.impl
+		 properties
+			Dispatch_Protocol => Sporadic;
+			Deadline =>100 ms;
+			period => 100 ms;
+			Source_Name => "composenntReady" applies to NotReady_out;
+			Source_Name => "composenntNotReady" applies to ready_compos_out;
+	end ready_composants.impl;
+	
+	--verifer si on a dans la zone specifie
+	thread verification_area
+		features
+			Zpos_in:in event data port data_pkg:: Position;
+			pos_in:in event data port data_pkg:: Position;
+			verif_area_yes_out:out event port ;
+			verif_area_no_out:out event  port ;
+		
+	end verification_area;
+	
+thread implementation verification_area.impl
+	properties
+			Dispatch_Protocol => Sporadic;
+			Deadline =>100 ms;
+			period => 100 ms;
+			Source_Name => "inArea" applies to verif_area_yes_out;
+			Source_Name => "outArea" applies to verif_area_no_out;
+end verification_area.impl;
+	 
+	 
+	thread initial_app --start
+		features
+			Zpos: in out event data port data_pkg:: Position;
+			camera_sensor_in : in event data port  data_pkg::video;
+			
+	end initial_app;
+	thread implementation initial_app.impl
+		  properties
+            Thread_Properties:: Dispatch_Protocol => Periodic;
+			Period => 200 ms;
+			Deadline =>200 ms;
+	end initial_app.impl;
+	
+	
+	thread panne --detection de panne
+		features
+			NotReady_in : in event port;
+			lost_signal_in:in event  port;
+			verif_area_no_in:in event port;
+		 
+	end panne;
+	thread implementation panne.impl
+		properties
+           Dispatch_Protocol => Periodic;
+			Period => 200 ms;
+			Deadline =>200 ms;
+	end panne.impl;
+	
+	thread planification --historique
+		features
+			end_mission_failed_in: in event  port;
+			end_mission_success_in: in event port ;
+	end planification;
+	
+	thread implementation planification.impl
+		 properties
+            Dispatch_Protocol => Periodic;
+			Period => 200 ms;
+			Deadline =>200 ms;
+	end planification.impl;
+	
+	
+	thread communication 
+		features
+			Zpos: in out event data port data_pkg:: Position;
+			pos_in: in event data port data_pkg:: Position;
+			camera_sensor_in : in event data port  data_pkg::video;
+			camera_sensor_out : out event data port  data_pkg::video;
+	end communication;
+	thread implementation communication.impl
+		 properties
+            Dispatch_Protocol => Periodic;
+			Period => 200 ms;
+			Deadline =>200 ms;
+	end communication.impl;
+	
+	thread filter
+		features
+		pos_in:in event data port data_pkg:: Position;
+		orientation:in  out event data port data_pkg:: Orientation; --th,rol yaw, pitch--
+	end filter;
+	thread implementation filter.impl
+		properties
+		    Dispatch_Protocol => Sporadic;
+			Deadline =>100 ms;
+			period => 100 ms;
+			Source_Name => "orientation" applies to orientation;
+	end filter.impl;
+	
+	
+	thread PID 
+		features
+			orientation:in out event data port data_pkg:: Orientation;
+		
+	end PID;
+	thread implementation  PID.impl
+		 properties
+			Dispatch_Protocol => Sporadic;
+			Deadline =>100 ms;
+			period => 100 ms;
+			Source_Name => "NewOrientation" applies to orientation;
+	end PID.impl;
+	
+	
+	thread modulator
+		features
+			ordre_init_out:out event port;
+	        orientation_in:in event data port data_pkg:: Orientation;
+		
+	end modulator;
+	thread implementation modulator.impl
+		properties
+			Dispatch_Protocol => Sporadic;
+			Deadline =>100 ms;
+			period => 100 ms;
+			Source_Name => "ordre" applies to ordre_init_out;
+	end modulator.impl;
+	
+	
+	thread mojor
+		features
+			mission: in event port ;
+			 major_succ: out event data port data_pkg::major;
+		 
+	end mojor;
+	thread implementation mojor.impl
+		properties
+            Thread_Properties:: Dispatch_Protocol => Periodic;
+			Period => 200 ms;
+			Deadline =>200 ms;
+	end mojor.impl;
+	
+	process maj_succ
+		features
+			mission: in event  port ;
+			 major_succ: out event data port data_pkg::major;
+		modes
+			majority : initial mode;
+	end maj_succ;
+	
+	
+	process implementation maj_succ.impl
+		subcomponents
+			this_major:thread mojor;
+		connections
+			cnx:port mission -> this_major.mission;
+			cnx2: port this_major.major_succ -> major_succ;
+		
+		
+	end maj_succ.impl;
+	
+	process station_vol
+		features
+			NotReady_in : in event port;
+			ready_comp:in event port;
+			end_mission_failed_in: in event  port;
+			end_mission_success_in: in event  port ;
+			Zpos: in out event data port data_pkg:: Position;
+			pos_in : in out event data port data_pkg:: Position;
+			verif_area_no_in:in event port ;
+			camera_sensor: in event data port data_pkg::video;
+			test_ready: out event port;
+			signal: in out  event data port;
+			
+		modes
+			initialization: initial mode;
+		    completedMissionFailed: mode;
+			completedMissionSuccess: mode;
+			Ready_drones : mode;
+			All_ok:mode;
+			majority: mode;
+			
+	end station_vol;
+	
+	process implementation station_vol.impl
+		subcomponents
+		  satrt_inital: thread initial_app;
+		  monitor_signal: thread signal_monitor_station;
+		  detected_panne: thread panne;
+		  send_planification : thread planification;
+		  commun: thread communication;
+		connections
+			cnx1:port satrt_inital.Zpos-> commun.Zpos;
+			cnx2: port end_mission_success_in ->send_planification.end_mission_success_in;
+			cnx3: port end_mission_failed_in ->send_planification.end_mission_failed_in;
+			cnx4: port NotReady_in -> detected_panne.NotReady_in;
+			cnx5: port verif_area_no_in -> detected_panne.verif_area_no_in;
+			cnx6: port monitor_signal.reply_signal -> detected_panne.lost_signal_in;
+			cnx7: port camera_sensor -> commun.camera_sensor_in;
+			cnx8: port commun.camera_sensor_out -> satrt_inital.camera_sensor_in;
+			cnx9: port commun.Zpos -> Zpos;
+			cnx10: port signal <-> monitor_signal.reply_signal;
+			cnx11: port pos_in -> commun.pos_in;
+			
+	end station_vol.impl;
+	
+	process control_vol
+		features
+			
+			dist: in data port data_pkg::distance;
+			signal: in out event data port;
+			ordre_init_out:out event port;
+			ready_compos_in: in out event port;
+			NotReady_in:  in out event port;
+			desinfection_area_in:in event port;
+			test_ready_in: in event port;
+		    orientation:in out event data port data_pkg:: Orientation; --th,rol yaw, pitch--
+			pos_in:in out event data port data_pkg:: Position;
+			Zpos_in:in event data port data_pkg:: Position;
+			commande_out : out event data port data_pkg :: acceleration; 
+			verif_area_yes_out: in out event  port ;
+			verif_area_no_out: in out event  port;
+			check_tank_empty_out:out event  port ;
+			check_tank_NotEmpty_out:out event  port;
+		    obst_out:out data port data_pkg::obstacle_detected;
+		    camera_sensor_out : in out event data port  data_pkg::video;
+		
+			
+		   
+		modes
+			flying: initial mode;
+			
+	end control_vol;
+	
+	
+	process implementation control_vol.impl
+	subcomponents
+		received_filter: thread filter;
+		calcul_PID: thread PID;
+		send_modulor: thread modulator;
+		obst_detected: thread obstacle_detection;
+		verif: thread verification_area;
+		monitor_signal: thread signal_monitor_control;
+	    comp_ready: thread ready_composants;
+	connections
+		cnx1: port received_filter.orientation -> calcul_PID.orientation;
+		cnx2: port calcul_PID.orientation-> send_modulor.orientation_in;
+        cnx3: port orientation-> received_filter.orientation;
+        cnx4: port pos_in -> received_filter.pos_in;
+        cnx5: port send_modulor.ordre_init_out -> ordre_init_out;
+        cnx10: port verif.verif_area_yes_out -> verif_area_yes_out;
+        cnx11: port verif.verif_area_no_out -> verif_area_no_out;
+        cnx13: port pos_in -> verif.pos_in;
+        cnx14: port Zpos_in -> verif.Zpos_in;
+        cnx15: port dist -> obst_detected.dist_in;
+        cnx16: port test_ready_in -> comp_ready.test_ready_in;
+        cnx17: port signal <->monitor_signal.reply_signal;
+        cnx18: port comp_ready.NotReady_out -> NotReady_in;
+        cnx19: port comp_ready.ready_compos_out->ready_compos_in;
+        cnx20: port obst_detected.obst_out -> obst_out;
+		
+			
+			
+		
+			
+end control_vol.impl;
+
+end Software;

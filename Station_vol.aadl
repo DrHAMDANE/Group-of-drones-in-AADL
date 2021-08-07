@@ -1,0 +1,58 @@
+----------------------- © Dr. Mohamed Elkamel HAMDANE & Mme Meriem BOUDROUAZ & Mme Ines BRELLA ------------------
+------------------------------------------------hamdane(dot)mohamed(at)ensc(dot)dz-------------------------------
+--------------------------------------------Computer science IFA Department-------------------------------------- 
+--------------------------------------AbdElhamid Mehri University of Constantine 2-------------------------------
+-------------------------------------------------------Algeria---------------------------------------------------
+---------------------------------------------------------2021----------------------------------------------------
+package Station_vol
+public
+	with Software,Hardware,data_pkg;
+	
+	
+	system state
+		features
+			position:  in out event data port data_pkg:: Position;
+			Zposition:  in out event data port data_pkg:: Position;
+			ready: in out event port;
+			signal: in out event data port;
+			connect: in out event port;
+			camera_sensor: in out event data port data_pkg::video;
+			missionFailed: in event port;
+			misionSuccess: in event  port ;
+			major_succ: out event data port  data_pkg::major;
+	
+	end state;
+	
+	
+	
+	
+	
+	system implementation state.impl
+		subcomponents
+			the_state:process Software :: station_vol.impl;
+			this_major: process Software:: maj_succ.impl;
+			station_cpu: processor Hardware::cpu;
+			this_net:  bus Hardware::net;
+		connections
+			
+			conx1: bus access station_cpu.net_access <->this_net;
+			
+			
+			cnx3 : port the_state.Zpos ->Zposition;
+			cnx4:port signal <-> the_state.signal;
+			cnx6: port connect -> the_state.NotReady_in;
+			cnx7: port the_state.test_ready -> connect;
+			cnx8: port camera_sensor -> the_state.camera_sensor;
+			cnx9: port ready -> the_state.ready_comp;
+			cnx10:port misionSuccess -> the_state.end_mission_success_in;
+			cnx11: port missionFailed -> the_state.end_mission_failed_in;
+			cnx12: port  misionSuccess -> this_major.mission;
+			cnx13: port this_major.major_succ -> major_succ;
+			cnx14: port connect ->the_state.verif_area_no_in;
+			cnx15 : port position  ->the_state.pos_in;
+			cnx116 : port  the_state.pos_in-> position;
+			
+		
+			
+	end state.impl;
+end Station_vol;

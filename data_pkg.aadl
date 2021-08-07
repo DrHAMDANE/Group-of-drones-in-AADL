@@ -1,0 +1,44 @@
+----------------------- © Dr. Mohamed Elkamel HAMDANE & Mme Meriem BOUDROUAZ & Mme Ines BRELLA ------------------
+------------------------------------------------hamdane(dot)mohamed(at)ensc(dot)dz-------------------------------
+--------------------------------------------Computer science IFA Department-------------------------------------- 
+--------------------------------------AbdElhamid Mehri University of Constantine 2-------------------------------
+-------------------------------------------------------Algeria---------------------------------------------------
+---------------------------------------------------------2021----------------------------------------------------
+package data_pkg
+public
+	
+	data Position --position GPS & area --
+		properties
+			data_size  => 8 Bytes;			
+	end Position;
+	
+	data Orientation -- info MPU--
+		properties
+			data_size => 1 Bytes;
+	end Orientation;
+	
+	data distance
+		properties
+			data_size => 2 Bytes;
+	end distance;
+	
+	data obstacle_detected 
+		properties
+			data_size => 1 Bytes;
+	end obstacle_detected;
+	
+			
+	data acceleration
+		properties
+			data_size => 8 Bytes;
+	end acceleration;
+	
+	data video
+		properties
+			data_size  => 200 Bytes;
+	end video;
+	
+	data major	
+	end major;
+	
+end data_pkg;

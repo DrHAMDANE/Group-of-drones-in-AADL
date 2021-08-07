@@ -1,0 +1,123 @@
+----------------------- © Dr. Mohamed Elkamel HAMDANE & Mme Meriem BOUDROUAZ & Mme Ines BRELLA ------------------
+------------------------------------------------hamdane(dot)mohamed(at)ensc(dot)dz-------------------------------
+--------------------------------------------Computer science IFA Department-------------------------------------- 
+--------------------------------------AbdElhamid Mehri University of Constantine 2-------------------------------
+-------------------------------------------------------Algeria---------------------------------------------------
+---------------------------------------------------------2021----------------------------------------------------
+
+package Hardware
+
+public
+	 with data_pkg,SEI,ARINC653;
+	 
+	
+	  virtual processor partition
+	  	
+	  end partition;
+	 
+	  virtual processor implementation partition.impl
+	  end partition.impl;
+	 
+	 processor cpu
+		features
+			net_access: requires bus access net;
+	end cpu;
+	
+	processor implementation cpu.impl
+		subcomponents
+			runtime1 : virtual processor partition.impl
+		{ARINC653::DAL => LEVEL_B;
+		 ARINC653::Partition_Identifier => 1;
+		 ARINC653::Partition_Name => "runtime a";
+		 Source_Name => "partition1";
+		};
+	runtime2 : virtual processor partition.impl
+		{ARINC653::DAL => LEVEL_A;
+		 ARINC653::Partition_Identifier => 2;
+		 ARINC653::Partition_Name => "runtime b";
+		  Source_Name => "partition2";
+		};
+		
+	properties
+	ARINC653::Module_Schedule => 
+	    ( [Partition => reference (runtime1);
+	      Duration  => 10 ms;
+	      Periodic_Processing_Start => false;],
+	      [Partition => reference (runtime2);
+	      Duration  => 20 ms;
+	      Periodic_Processing_Start => false;]
+	    ); 
+	end cpu.impl;
+	
+	 bus net	
+	 	properties
+            Data_Size => 8 Bytes;
+            SEI::BandWidthBudget => 512.0 KBytesps;
+            SEI::BandWidthCapacity => 768.0 KBytesps;
+	 	
+	end net;
+	
+	
+	
+	device Position_sensor --capteur GPS x,y,z--
+		features
+			ordre_init_in:in event port;
+			pos:out event data port data_pkg:: Position;
+			
+		properties
+			Dispatch_Protocol => periodic;
+			Period => 50 ms;
+	end Position_sensor;
+	
+	device orientation_sensor --capture MPU throttle, roll, yaw, pitch--
+		features
+			ordre_init_in:in event port;
+		or_out:out event data port data_pkg::orientation;
+	
+		properties
+			Dispatch_Protocol => periodic;
+			Period => 50 ms;
+	end orientation_sensor;
+	
+	device dist_sensor
+		features
+			dist:out event data port  data_pkg::distance;
+			
+	end dist_sensor;
+	
+	device engine
+		features
+			ordre_init_in:in event port;
+	        commande_in : in event data port data_pkg:: acceleration;
+	        obs_in: in event data port  data_pkg::obstacle_detected;
+	      
+	end engine;
+	
+	
+	device sprinklers
+		features
+			sprinklers_sensor_in : in event port ;
+			sprinklers_sensor_out: out event port;
+	end sprinklers;
+	
+	
+	device camera
+		features
+			camera_sensor_out : in out event data port  data_pkg::video;
+			camera_sensor_in: in event  port ;
+			net_access: requires bus access net;
+	end camera;
+	
+	
+	device light
+		features
+		reply_signal_in :in event  port ;
+	end light;
+	
+	device propellers --helices
+	features
+	ready_compos_in: in event port;
+	rest_fly_in: in event  port ;
+	end propellers;
+	
+end Hardware;

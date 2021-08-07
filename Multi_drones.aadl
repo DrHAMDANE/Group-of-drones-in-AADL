@@ -1,0 +1,117 @@
+----------------------- © Dr. Mohamed Elkamel HAMDANE & Mme Meriem BOUDROUAZ & Mme Ines BRELLA ------------------
+------------------------------------------------hamdane(dot)mohamed(at)ensc(dot)dz-------------------------------
+--------------------------------------------Computer science IFA Department-------------------------------------- 
+--------------------------------------AbdElhamid Mehri University of Constantine 2-------------------------------
+-------------------------------------------------------Algeria---------------------------------------------------
+---------------------------------------------------------2021----------------------------------------------------
+package Multi_drones
+public
+	with Station_vol,Drone,Hardware;
+	
+	
+	system multiDrone
+		modes
+			initialization:initial mode;
+			completedMissionFailed: mode;
+			completedMissionSuccess: mode;
+			majority : mode;
+			Ready_drones : mode;
+			All_ok:mode;
+	end multiDrone;
+	 
+		system implementation multiDrone.impl
+	subcomponents
+
+		drone1: system Drone::main_sys.impl;
+		drone2: system Drone::main_sys.impl;
+		drone3: system Drone::main_sys.impl;
+		drone4: system Drone::main_sys.impl;
+		drone5: system Drone::main_sys.impl;
+		State: system Station_vol::state.impl;
+
+		drone1_cpu: processor Hardware::cpu;
+		drone2_cpu: processor Hardware::cpu;
+		drone3_cpu: processor Hardware::cpu;
+		drone4_cpu: processor Hardware::cpu;
+		drone5_cpu: processor Hardware::cpu;
+		state_cpu: processor Hardware::cpu;
+
+		this_net: bus Hardware::net;
+
+	connections
+		-- represente le lancement des drones recupération
+		cn: bus access state_cpu.net_access <-> this_net;
+		cnx1: bus access this_net <-> drone1_cpu.net_access;
+		cnx2: bus access this_net <-> drone2_cpu.net_access;
+		cnx3: bus access this_net <-> drone3_cpu.net_access;
+		cnx4: bus access this_net <-> drone4_cpu.net_access;
+		cnx5: bus access this_net <-> drone5_cpu.net_access;
+        
+        cnx6: port State.Zposition -> drone1.Zposition;
+		cnx7: port State.Zposition -> drone2.Zposition;
+		cnx8: port State.Zposition -> drone3.Zposition;
+		cnx9: port State.Zposition -> drone4.Zposition;
+		cnx10: port State.Zposition -> drone5.Zposition;
+
+		cnx11: port State.ready <-> drone1.ready in modes (Ready_drones);
+		cnx12: port State.ready <-> drone2.ready in modes (Ready_drones);
+		cnx13: port State.ready <-> drone3.ready in modes (Ready_drones);
+		cnx14: port State.ready <-> drone4.ready in modes (Ready_drones);
+		cnx15: port State.ready <-> drone5.ready in modes (Ready_drones);
+
+		cnx16: port State.connect <-> drone1.cnnect in modes (completedMissionFailed);
+		cnx17: port State.connect <-> drone2.cnnect in modes (completedMissionFailed);
+		cnx18: port State.connect <-> drone3.cnnect in modes (completedMissionFailed);
+		cnx19: port State.connect <-> drone4.cnnect in modes (completedMissionFailed);
+		cnx20: port State.connect <-> drone5.cnnect in modes (completedMissionFailed);
+
+		cnx21: port drone1.camera_sensor -> State.camera_sensor;
+		cnx22: port drone2.camera_sensor -> State.camera_sensor;
+		cnx23: port drone3.camera_sensor -> State.camera_sensor;
+		cnx24: port drone4.camera_sensor -> State.camera_sensor;
+		cnx25: port drone5.camera_sensor -> State.camera_sensor;
+
+		cnx26: port drone1.missionFailed -> State.missionFailed  in modes (completedMissionFailed);
+		cnx27: port drone2.missionFailed -> State.missionFailed  in modes (completedMissionFailed);
+		cnx28: port drone3.missionFailed -> State.missionFailed  in modes (completedMissionFailed);
+		cnx29: port drone4.missionFailed -> State.missionFailed  in modes (completedMissionFailed);
+		cnx30: port drone5.missionFailed -> State.missionFailed  in modes (completedMissionFailed);
+
+		cnx31: port drone1.missionSuccess -> State.misionSuccess in modes (majority);
+		cnx32: port drone2.missionSuccess -> State.misionSuccess in modes (majority);
+		cnx33: port drone3.missionSuccess -> State.misionSuccess in modes (majority);
+		cnx34: port drone4.missionSuccess -> State.misionSuccess in modes (majority);
+		cnx35: port drone5.missionSuccess -> State.misionSuccess in modes (majority);
+		
+		cnx36: port drone1.position -> State.position;
+		cnx37: port drone2.position -> State.position;
+		cnx38: port drone3.position -> State.position;
+		cnx39: port drone4.position -> State.position;
+		cnx40: port drone5.position -> State.position;
+		
+		
+	    cnx41: port State.signal <-> drone1.signal ;
+		cnx42: port State.signal <-> drone2.signal ;
+		cnx43: port State.signal <-> drone3.signal ;
+		cnx44: port State.signal <-> drone4.signal ;
+		cnx45: port State.signal <-> drone5.signal ;
+
+	modes
+		started: initialization -[State.ready]-> Ready_drones;
+		Ready_drones -[State.misionSuccess]-> All_ok;
+		All_ok -[State.misionSuccess]-> completedMissionSuccess;
+		Ready_drones -[State.major_succ]-> majority;
+		majority -[State.major_succ]-> completedMissionSuccess;
+		Ready_drones -[State.missionFailed]-> completedMissionFailed;
+		initialization -[State.connect]-> completedMissionFailed;
+
+	properties
+		Actual_Processor_Binding => (reference (drone1_cpu)) applies to drone1;
+		Actual_Processor_Binding => (reference (drone2_cpu)) applies to drone2;
+		Actual_Processor_Binding => (reference (drone3_cpu)) applies to drone3;
+		Actual_Processor_Binding => (reference (drone4_cpu)) applies to drone4;
+		Actual_Processor_Binding => (reference (drone5_cpu)) applies to drone5;
+        Actual_Processor_Binding => (reference (state_cpu)) applies to state;
+end multiDrone.impl;
+	
+end Multi_drones;
