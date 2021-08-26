@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="bf91d736-cf81-4198-8392-6fba33ec0912" manual="true">
+    <element uuid="d4c2c1a0-167d-4ab1-8ff2-e103aa28a62e" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>main_sys</seg>
+      </bo>
+      <position x="229.0" y="38.0"/>
+      <size width="112.0" height="35.0"/>
+    </element>
+    <element uuid="114b08fe-8318-4f8e-bb39-db030561482e" manual="true">
+      <element uuid="c7f77909-2a66-46f6-97eb-47945988b350" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="225.0" y="67.5"/>
+          <point x="237.0" y="67.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>main_sys.impl</seg>
+      </bo>
+      <position x="60.0" y="38.0"/>
+      <size width="149.0" height="35.0"/>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>Drone</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="353.0" height="100.0"/>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>Drone</seg>
+    </context>
+  </config>
+</diagram:Diagram>

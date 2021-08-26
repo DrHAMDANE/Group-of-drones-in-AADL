@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="74eb3a28-b0f9-4860-a6d9-59240d56c22e" manual="true">
+    <element uuid="32db060d-591a-434b-bb74-e18890c1dff0" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>state</seg>
+      </bo>
+      <position x="237.0" y="38.0"/>
+      <size width="81.0" height="35.0"/>
+    </element>
+    <element uuid="c4dfab68-9a79-408a-aed5-d50a37b8c365" manual="true">
+      <element uuid="42b957d8-a180-4ede-83cd-7a003456165f" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="233.0" y="67.5"/>
+          <point x="245.0" y="67.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>state.impl</seg>
+      </bo>
+      <position x="99.0" y="38.0"/>
+      <size width="118.0" height="35.0"/>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>Station_vol</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="330.0" height="100.0"/>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>Station_vol</seg>
+    </context>
+  </config>
+</diagram:Diagram>

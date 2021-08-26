@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="cd5e6fd3-b057-44f0-9550-42b8cbdc7f94" manual="true">
+    <element uuid="598a6e1b-de37-4783-868b-3a203a414e85" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>multiDrone</seg>
+      </bo>
+      <position x="292.0" y="38.0"/>
+      <size width="126.0" height="35.0"/>
+    </element>
+    <element uuid="5068390d-3cd8-4bfc-a1da-23b6fa57af6b" manual="true">
+      <element uuid="456fdd92-05f0-4219-acb1-cb7ee3c45a06" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="288.0" y="67.5"/>
+          <point x="300.0" y="67.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>multiDrone.impl</seg>
+      </bo>
+      <position x="110.0" y="38.0"/>
+      <size width="162.0" height="35.0"/>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>Multi_drones</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="430.0" height="100.0"/>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>Multi_drones</seg>
+    </context>
+  </config>
+</diagram:Diagram>
