@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="1106bb89-cd73-4aac-99b9-71d2be660955" manual="true">
+    <element uuid="c150ba68-bd48-4f65-8436-07543ccf46e5" manual="true">
+      <element uuid="01c74c39-a096-4f7b-b494-9bac3cfa05d8" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx</seg>
+      </bo>
+      <bendpoints>
+        <point x="627.0" y="325.0"/>
+        <point x="627.0" y="185.0"/>
+        <point x="1217.0" y="185.0"/>
+        <point x="1217.0" y="107.0"/>
+        <point x="1237.0" y="107.0"/>
+        <point x="1237.0" y="82.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="c4f1746a-5982-47a7-a6c0-bb336f7e2f54" manual="true">
+      <element uuid="0735288d-342f-4274-9d7d-c06cbe5233be" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx1</seg>
+      </bo>
+      <bendpoints>
+        <point x="1237.0" y="565.0"/>
+        <point x="1237.0" y="235.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="eaaa79bc-34aa-4e9f-a35a-f0eca823450a" manual="true">
+      <element uuid="2706432c-1cf2-47e0-9b65-05e8c100d7f2" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx10</seg>
+      </bo>
+    </element>
+    <element uuid="8c814253-a992-4b37-af72-cd751bcfea3f" manual="true">
+      <element uuid="4d06e3ee-4613-4e93-b3fc-32d1f3f4b4df" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx11</seg>
+      </bo>
+      <bendpoints>
+        <point x="1227.0" y="745.0"/>
+        <point x="1227.0" y="693.0"/>
+        <point x="1267.0" y="693.0"/>
+        <point x="1267.0" y="686.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="718534d9-253e-45b5-8dc2-b40769735776" manual="true">
+      <element uuid="159e3813-6ecb-458e-be44-2c94da344890" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx12</seg>
+      </bo>
+      <bendpoints>
+        <point x="1745.0" y="132.0"/>
+        <point x="1745.0" y="71.0"/>
+        <point x="607.0" y="71.0"/>
+        <point x="607.0" y="505.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="c4715370-74a3-4ed6-8644-a60ad37b1615" manual="true">
+      <element uuid="a23854c7-f3aa-4821-857a-a5b06a67dab0" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx13</seg>
+      </bo>
+      <bendpoints>
+        <point x="1247.0" y="445.0"/>
+        <point x="1247.0" y="402.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="7bea1823-2c90-41b9-9b40-cb357217755e" manual="true">
+      <element uuid="51219ed6-a3bc-48ae-a4d3-190b1297f531" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx14</seg>
+      </bo>
+      <bendpoints>
+        <point x="1227.0" y="325.0"/>
+        <point x="1227.0" y="132.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="eae1879f-19d5-4b6f-adb0-b0f6c4eae488" manual="true">
+      <element uuid="efed9b34-c8a6-4f0b-a5ef-91914d3696f3" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx15</seg>
+      </bo>
+      <bendpoints>
+        <point x="1247.0" y="445.0"/>
+        <point x="1247.0" y="374.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="70043c8c-8643-4323-a298-f11f898b5fbd" manual="true">
+      <element uuid="11ce571a-2634-40e6-9802-2b4251c30ac7" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx16</seg>
+      </bo>
+      <bendpoints>
+        <point x="1217.0" y="385.0"/>
+        <point x="1217.0" y="349.5"/>
+        <point x="1257.0" y="349.5"/>
+        <point x="1257.0" y="947.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="83bcdd67-798c-4fa0-95ed-87858836e8f2" manual="true">
+      <element uuid="5dd06dc2-3c3d-4aeb-aa22-737e609b95f4" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx17</seg>
+      </bo>
+      <bendpoints>
+        <point x="1217.0" y="385.0"/>
+        <point x="1217.0" y="349.5"/>
+        <point x="1257.0" y="349.5"/>
+        <point x="1257.0" y="767.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="08f24d1a-af65-4736-af19-118533006654" manual="true">
+      <element uuid="a1f147d7-da74-424a-b3ca-ee6e04ba3b26" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx18</seg>
+      </bo>
+      <bendpoints>
+        <point x="617.0" y="817.0"/>
+        <point x="617.0" y="445.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="6b3d1ddf-4afc-4341-a898-4cd9a51b7ca3" manual="true">
+      <element uuid="e7c09648-5743-4f22-a90f-79b8d7e72c5c" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx19</seg>
+      </bo>
+      <bendpoints>
+        <point x="617.0" y="445.0"/>
+        <point x="617.0" y="1025.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="907dc12c-ac8d-4c4c-a141-9cc278c67855" manual="true">
+      <element uuid="95c670df-eed4-46f8-b6b4-db93a475060b" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx2</seg>
+      </bo>
+      <bendpoints>
+        <point x="1237.0" y="565.0"/>
+        <point x="1237.0" y="1035.0"/>
+        <point x="607.0" y="1035.0"/>
+        <point x="607.0" y="615.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a29e1a82-948b-47a4-84c0-a0e1937a31b9" manual="true">
+      <element uuid="26b0c907-942c-4aa8-9300-691fd9ed00a1" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx20</seg>
+      </bo>
+      <bendpoints>
+        <point x="1217.0" y="385.0"/>
+        <point x="1217.0" y="349.5"/>
+        <point x="1257.0" y="349.5"/>
+        <point x="1257.0" y="324.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="6d75a118-c152-43d0-a815-079198c068ea" manual="true">
+      <element uuid="3f18b9fc-937a-43a6-a4a5-2e8ed318af4a" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx21</seg>
+      </bo>
+      <bendpoints>
+        <point x="627.0" y="997.0"/>
+        <point x="627.0" y="625.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="d75d8c77-3997-42c9-abd0-59cf2c674509" manual="true">
+      <element uuid="e0261743-4f02-4046-bd81-b58e4c452596" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx22</seg>
+      </bo>
+      <bendpoints>
+        <point x="982.0" y="675.0"/>
+        <point x="982.0" y="625.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="4bb9e259-f030-4596-a8c8-f34804a051da" manual="true">
+      <element uuid="7d5028a3-32c3-4bcd-b19b-853b4feae365" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx23</seg>
+      </bo>
+      <bendpoints>
+        <point x="1217.0" y="625.0"/>
+        <point x="1217.0" y="630.5"/>
+        <point x="1267.0" y="630.5"/>
+        <point x="1267.0" y="636.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="d8faaf94-c775-479b-8c10-c9711f65e2cc" manual="true">
+      <element uuid="e2108f66-e3df-4a0d-8a3b-24fa694bfbe7" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx24</seg>
+      </bo>
+    </element>
+    <element uuid="82b786be-fe41-4be5-b8d6-7bd2f6081c4a" manual="true">
+      <element uuid="0b88c898-a650-44d4-abcd-33ce3c932253" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx25</seg>
+      </bo>
+      <bendpoints>
+        <point x="464.0" y="1115.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a67e9ffd-6d3c-4553-8c6f-af270baf5d54" manual="true">
+      <element uuid="7258e42f-0141-488f-8086-dc6537487006" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx26</seg>
+      </bo>
+      <bendpoints>
+        <point x="454.0" y="1195.0"/>
+        <point x="454.0" y="1126.6666666666667"/>
+        <point x="460.0" y="1126.6666666666665"/>
+      </bendpoints>
+    </element>
+    <element uuid="0c3ef071-a4d1-4267-92e2-ba804209853c" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx28</seg>
+      </bo>
+      <bendpoints>
+        <point x="567.0" y="1120.8333333333333"/>
+      </bendpoints>
+    </element>
+    <element uuid="644f91ca-5a95-42be-a6f7-ca705381de1c" manual="true">
+      <element uuid="5df7d31a-b880-45e5-90dc-5c92c98ef6ec" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx29</seg>
+      </bo>
+      <bendpoints>
+        <point x="1247.0" y="505.0"/>
+        <point x="1247.0" y="533.0"/>
+        <point x="1745.0" y="533.0"/>
+        <point x="1745.0" y="714.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a06c5c44-0550-4386-a609-f96e8cc30931" manual="true">
+      <element uuid="fe5300f5-e2c8-4804-8653-103716ac5183" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx3</seg>
+      </bo>
+      <bendpoints>
+        <point x="1237.0" y="565.0"/>
+        <point x="1237.0" y="586.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="978321b4-bd8c-4243-8276-d143ddf7f276" manual="true">
+      <element uuid="e06c9693-f3ff-4d24-b6ba-a861b99a8eb6" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx30</seg>
+      </bo>
+      <bendpoints>
+        <point x="1217.0" y="685.0"/>
+        <point x="1217.0" y="700.0"/>
+        <point x="1267.0" y="700.0"/>
+        <point x="1267.0" y="714.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="3c1dd9d3-5c2c-4fb0-9793-2ba102285a05" manual="true">
+      <element uuid="fafa8bec-974c-475d-90d6-30eafb63f52a" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx31</seg>
+      </bo>
+      <bendpoints>
+        <point x="1247.0" y="505.0"/>
+        <point x="1247.0" y="452.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="afc9d5db-25ac-4fda-95a6-d4d3c599767d" manual="true">
+      <element uuid="cf4fdf8e-340c-4a87-9806-4539f9a5637b" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx33</seg>
+      </bo>
+      <bendpoints>
+        <point x="1227.0" y="265.0"/>
+        <point x="1227.0" y="132.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="62c2e6b5-7122-4990-8476-aa551ecb1af5" manual="true">
+      <element uuid="76a2df68-54ae-4f5d-ae5b-d508dff687ad" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx4</seg>
+      </bo>
+      <bendpoints>
+        <point x="1247.0" y="1045.0"/>
+        <point x="1247.0" y="505.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="666b54fe-74cf-43af-9616-4a5ad3a00d94" manual="true">
+      <element uuid="28bf9ad0-038c-441d-b867-095e52d20777" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx7</seg>
+      </bo>
+    </element>
+    <element uuid="e6667235-4659-4ca8-ac03-339a97967be2" manual="true">
+      <element uuid="3b31a365-dc0f-4b0a-88f0-16267b580ef9" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx8</seg>
+      </bo>
+      <bendpoints>
+        <point x="627.0" y="185.0"/>
+        <point x="627.0" y="325.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="515701b9-5366-44e0-ad94-6cfd1a41ec6c" manual="true">
+      <element uuid="a406c1b8-90fd-476a-b1bd-7b0ab6e7bcd4" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnx9</seg>
+      </bo>
+    </element>
+    <element uuid="bd5bd351-a494-4ff2-9210-552844071a1f" manual="true">
+      <element uuid="1a85ecea-6cae-4b7d-8bf7-9725af359869" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cnxx</seg>
+      </bo>
+    </element>
+    <element uuid="9db1a004-13fa-4c8c-8d07-8123db1901de" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>camera_sensor</seg>
+      </bo>
+      <position x="1653.0" y="981.0"/>
+    </element>
+    <element uuid="af2818ca-7b48-4fa4-84a4-cb74e07ff6c3" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>cnnect</seg>
+      </bo>
+      <position x="1714.0" y="88.0"/>
+    </element>
+    <element uuid="6a62ad39-b4f9-4bd2-a602-cdfca99c5ad7" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>missionFailed</seg>
+      </bo>
+      <position x="1661.0" y="408.0"/>
+    </element>
+    <element uuid="8dc371ef-952a-4e5e-b6ca-9bb275582d44" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>missionSuccess</seg>
+      </bo>
+      <position x="1649.0" y="670.0"/>
+    </element>
+    <element uuid="1f583875-144c-4b89-a8fa-0eea44e51038" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>position</seg>
+      </bo>
+      <position x="1704.0" y="38.0"/>
+    </element>
+    <element uuid="073f8082-5f4c-417b-b8d4-b6036b4de251" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>ready</seg>
+      </bo>
+      <position x="1721.0" y="358.0"/>
+    </element>
+    <element uuid="0051c195-1f13-4266-a56d-d3cdefed4964" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>signal</seg>
+      </bo>
+      <position y="1001.0"/>
+    </element>
+    <element uuid="91429bc7-75a1-4fe8-8d5d-11449ccff211" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>Zposition</seg>
+      </bo>
+      <position y="221.0"/>
+    </element>
+    <element uuid="3684718c-85f8-4679-b2b0-bfa9fee4add4" manual="true">
+      <bo>
+        <seg>mode</seg>
+        <seg>completedMissionFailed</seg>
+      </bo>
+      <position x="160.0" y="20.0"/>
+      <size width="209.0" height="35.0"/>
+    </element>
+    <element uuid="bda4cd4b-d20e-43b6-9669-155bcef3ea1e" manual="true">
+      <bo>
+        <seg>mode</seg>
+        <seg>completedMissionSuccess</seg>
+      </bo>
+      <position x="308.0" y="54.0"/>
+      <size width="220.0" height="35.0"/>
+    </element>
+    <element uuid="46921e03-6866-40fe-b244-965926913601" manual="true">
+      <bo>
+        <seg>mode</seg>
+        <seg>flying</seg>
+      </bo>
+      <position x="46.0" y="90.0"/>
+      <size width="81.0" height="35.0"/>
+    </element>
+    <element uuid="bded68ba-abec-43ea-b05a-57d13cfd5f02" manual="true">
+      <bo>
+        <seg>mode</seg>
+        <seg>initialization</seg>
+      </bo>
+      <position x="198.0" y="131.0"/>
+      <size width="133.0" height="55.0"/>
+    </element>
+    <element uuid="7106f441-0066-4eba-9784-63886881463f" manual="true">
+      <element uuid="f17356ff-1062-4522-933c-286e91a4c2d8" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>mtt</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>mode_transition</seg>
+        <seg>&lt;null></seg>
+        <seg>flying</seg>
+        <seg>completedMissionFailed</seg>
+        <seg>the_control</seg>
+        <seg>signal</seg>
+      </bo>
+    </element>
+    <element uuid="028b1124-8376-4deb-bef8-a2a1ba812687" manual="true">
+      <element uuid="b5d2c749-8ea4-49de-a7ff-b604216697b6" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>mtt</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>mode_transition</seg>
+        <seg>&lt;null></seg>
+        <seg>flying</seg>
+        <seg>completedMissionSuccess</seg>
+        <seg>the_control</seg>
+        <seg>check_tank_empty_out</seg>
+      </bo>
+    </element>
+    <element uuid="9c54abab-e8c4-4769-84d8-b9c410f9acfa" manual="true">
+      <element uuid="fbcc491c-e961-4ebe-8c03-f260d568df58" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>mtt</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>mode_transition</seg>
+        <seg>&lt;null></seg>
+        <seg>flying</seg>
+        <seg>completedMissionSuccess</seg>
+        <seg>the_control</seg>
+        <seg>signal</seg>
+      </bo>
+    </element>
+    <element uuid="20dce88e-dff5-4b66-998a-6725aa3dfc2f" manual="true">
+      <element uuid="12e65fd6-f06d-4f4c-89dc-02f7504388ad" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>mtt</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>mt</seg>
+        <seg>started</seg>
+      </bo>
+    </element>
+    <element uuid="7d18e7b9-00f4-4db1-8374-72ab49b4ad6d" manual="true">
+      <element uuid="a33950d8-492c-4061-a19c-f7994cdda812" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>camera_sensor_out</seg>
+        </bo>
+        <position y="218.0"/>
+      </element>
+      <element uuid="20cec82e-0a53-4ab6-9e6b-86130a77d7d2" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>check_tank_empty_out</seg>
+        </bo>
+        <position x="408.0" y="458.0"/>
+      </element>
+      <element uuid="093057b1-8a6d-429e-b7a1-bb857efdc5ac" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>check_tank_NotEmpty_out</seg>
+        </bo>
+        <position y="448.0"/>
+      </element>
+      <element uuid="a73437a0-691d-4723-ba9c-596120aaaf67" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>commande_out</seg>
+        </bo>
+        <position x="457.0" y="518.0"/>
+      </element>
+      <element uuid="0c5b8bef-7b77-4e75-853d-6c1703b2a3f0" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>desinfection_area_in</seg>
+        </bo>
+        <position y="398.0"/>
+      </element>
+      <element uuid="070e075e-106e-4c21-8921-6ce17e434bc5" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>dist</seg>
+        </bo>
+        <position y="158.0"/>
+      </element>
+      <element uuid="9dda90ea-2b63-42df-9f19-6dddfad19d6a" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>NotReady_in</seg>
+        </bo>
+        <position x="476.0" y="98.0"/>
+      </element>
+      <element uuid="1adafd55-3412-4a80-b65d-4bf1e47716ec" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>obst_out</seg>
+        </bo>
+        <position x="506.0" y="398.0"/>
+      </element>
+      <element uuid="31bee6b2-c240-4f8f-8236-bf4e49cfae3c" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>ordre_init_out</seg>
+        </bo>
+        <position x="465.0" y="338.0"/>
+      </element>
+      <element uuid="4025c76d-c60f-4c47-9420-ae160f30e77a" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>orientation</seg>
+        </bo>
+        <position y="338.0"/>
+      </element>
+      <element uuid="4ab43288-6e5d-47c7-92b2-6ba354a25ade" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>pos_in</seg>
+        </bo>
+        <position y="98.0"/>
+      </element>
+      <element uuid="a8e196ff-83bd-45d1-8ea5-94d4471fa991" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>ready_compos_in</seg>
+        </bo>
+        <position x="441.0" y="218.0"/>
+      </element>
+      <element uuid="2fcdbb55-6cfa-4510-a4cc-6711b15ee796" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>signal</seg>
+        </bo>
+        <position x="523.0" y="278.0"/>
+      </element>
+      <element uuid="9b3cb0a2-43e6-4c98-8710-1659e3a33065" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>test_ready_in</seg>
+        </bo>
+        <position y="278.0"/>
+      </element>
+      <element uuid="f3c406b3-4dc8-4c8c-91ae-781f1b2d3e98" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>verif_area_no_out</seg>
+        </bo>
+        <position x="438.0" y="38.0"/>
+      </element>
+      <element uuid="68035c31-393d-43ff-a01b-dae59e74cb13" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>verif_area_yes_out</seg>
+        </bo>
+        <position x="433.0" y="158.0"/>
+      </element>
+      <element uuid="92efc6c9-595d-4a8f-8c0c-3755d0aaa9bb" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>Zpos_in</seg>
+        </bo>
+        <position y="38.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>the_control</seg>
+      </bo>
+      <position x="625.0" y="183.0"/>
+      <size width="570.0" height="570.0"/>
+    </element>
+    <element uuid="8874c6a5-37e4-4d27-b385-95dcefd3319c" manual="true">
+      <element uuid="b09fad07-444b-41e1-a995-41ae4a969eef" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>camera_sensor_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="cc93e9bb-b3a6-4b66-ae3d-c693857213ad" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>camera_sensor_out</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="8a30a316-74dc-4577-aecd-518b601ce06f" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>net_access</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_camera</seg>
+      </bo>
+      <position x="1265.0" y="713.0"/>
+      <size width="416.0" height="160.0"/>
+    </element>
+    <element uuid="9f035484-d0d4-4296-96e9-c02f236356a3" manual="true">
+      <element uuid="50c33bdd-18f7-440c-bc5d-d546f98c5df4" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>net_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_control_cpu</seg>
+      </bo>
+      <position x="575.0" y="1067.0"/>
+      <size width="327.0" height="60.0"/>
+    </element>
+    <element uuid="2522653b-de07-46e9-8999-e5201fa1a24e" manual="true">
+      <element uuid="799662fc-ff57-4d62-a981-8a88b71a6287" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>net_access</seg>
+        </bo>
+        <position x="222.0" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_dist_cpu</seg>
+      </bo>
+      <position x="128.0" y="1141.0"/>
+      <size width="304.0" height="60.0"/>
+    </element>
+    <element uuid="8607a4c8-f082-4bf0-8c45-b025259876c5" manual="true">
+      <element uuid="1227b154-300f-486a-911e-6ca124f39452" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>dist</seg>
+        </bo>
+        <position x="219.0" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_distance_sensor</seg>
+      </bo>
+      <position x="337.0" y="331.0"/>
+      <size width="248.0" height="60.0"/>
+    </element>
+    <element uuid="2cfb2a0b-cc8b-4f03-b0f9-d2d76e939dea" manual="true">
+      <element uuid="f80ca4b2-1e29-490f-9244-1b83b5ce19b8" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>commande_in</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="df56a190-d977-4abc-828f-93c84a8950d7" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>obs_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="90cbab1d-5491-4d59-a5e7-76cb9a79a281" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>ordre_init_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_engine</seg>
+      </bo>
+      <position x="1265.0" y="532.0"/>
+      <size width="338.0" height="160.0"/>
+    </element>
+    <element uuid="5e933da3-eaa0-4d70-b02d-d066f31b9c42" manual="true">
+      <element uuid="3055310a-6b9b-42dc-a6c8-1f293db96a43" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>reply_signal_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_light</seg>
+      </bo>
+      <position x="1265.0" y="451.0"/>
+      <size width="341.0" height="60.0"/>
+    </element>
+    <element uuid="e9970ad4-b7e2-417c-8dcc-eb333b5383d1" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_net</seg>
+      </bo>
+      <position x="452.0" y="1091.0"/>
+      <size width="103.0" height="35.0"/>
+    </element>
+    <element uuid="db689308-c92f-4fb0-9ff2-b85f7871d077" manual="true">
+      <element uuid="5245bafc-2ebc-4d2e-b144-aa8dbe9201cf" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>or_out</seg>
+        </bo>
+        <position x="349.0" y="10.0"/>
+      </element>
+      <element uuid="5c9c9a5c-384b-453f-853c-05260d05f4da" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>ordre_init_in</seg>
+        </bo>
+        <position x="302.0" y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_orientation_sensor</seg>
+      </bo>
+      <position x="187.0" y="511.0"/>
+      <size width="398.0" height="110.0"/>
+    </element>
+    <element uuid="409634ff-3f05-4759-9eec-91042d457fd2" manual="true">
+      <element uuid="a2e0dd9b-7bec-42a0-94ed-168e8bcc3fb1" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>net_access</seg>
+        </bo>
+        <position x="221.0" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_pos_cpu</seg>
+      </bo>
+      <position x="129.0" y="1061.0"/>
+      <size width="303.0" height="60.0"/>
+    </element>
+    <element uuid="75024842-0fc1-46be-8695-c5efd68446f4" manual="true">
+      <element uuid="97010fbc-f57d-46c2-8c50-884dfed96703" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>ordre_init_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="22349616-3f62-4049-9a12-786421caf260" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>pos</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_Position_sensor</seg>
+      </bo>
+      <position x="1265.0" y="131.0"/>
+      <size width="380.0" height="110.0"/>
+    </element>
+    <element uuid="3515a1c4-fb66-48ea-8054-764c67a63821" manual="true">
+      <element uuid="579f1d25-68c1-4d3b-bb1a-20b6efb79bdf" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>ready_compos_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="ec50432b-039c-4f81-a9a9-b3e3928eec3a" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>rest_fly_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_propellers</seg>
+      </bo>
+      <position x="1265.0" y="270.0"/>
+      <size width="411.0" height="110.0"/>
+    </element>
+    <element uuid="9905d163-9b53-49a0-a327-f24c5792cddd" manual="true">
+      <element uuid="a22bfe45-06be-4341-913a-458d0ce6050e" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>sprinklers_sensor_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="fbb89c3a-c7d3-40d5-8293-ef9f9f125e30" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>sprinklers_sensor_out</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_sprinklers</seg>
+      </bo>
+      <position x="1265.0" y="893.0"/>
+      <size width="458.0" height="110.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>main_sys.impl</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="1765.0" height="1213.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>Drone::main_sys.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

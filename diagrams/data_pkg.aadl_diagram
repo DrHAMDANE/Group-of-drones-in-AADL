@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="86a23de9-ee4a-4941-8d60-db97477b674e" manual="true">
+    <element uuid="aeaeee37-2161-4ab4-9695-5b158c3f8f7a" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>acceleration</seg>
+      </bo>
+      <position x="83.0" y="203.0"/>
+      <size width="131.0" height="35.0"/>
+    </element>
+    <element uuid="db7bc72f-b40e-43d1-9dd3-e861aad5fa96" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>distance</seg>
+      </bo>
+      <position x="202.0" y="93.0"/>
+      <size width="101.0" height="35.0"/>
+    </element>
+    <element uuid="c2258783-c93f-4b7c-85b5-c41552e4483e" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>major</seg>
+      </bo>
+      <position x="183.0" y="38.0"/>
+      <size width="82.0" height="35.0"/>
+    </element>
+    <element uuid="536f5117-8393-41ef-abec-499149404f52" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>obstacle_detected</seg>
+      </bo>
+      <position x="83.0" y="258.0"/>
+      <size width="170.0" height="35.0"/>
+    </element>
+    <element uuid="cd38f362-13b8-40a2-88d8-fc52fa80dc2b" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>Orientation</seg>
+      </bo>
+      <position x="83.0" y="148.0"/>
+      <size width="122.0" height="35.0"/>
+    </element>
+    <element uuid="06595255-d010-48cc-bb82-ffe64717f8f6" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>Position</seg>
+      </bo>
+      <position x="83.0" y="93.0"/>
+      <size width="99.0" height="35.0"/>
+    </element>
+    <element uuid="d2c60d56-86c8-488f-9c9e-06b42e23cd6d" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>video</seg>
+      </bo>
+      <position x="83.0" y="38.0"/>
+      <size width="80.0" height="35.0"/>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>data_pkg</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="315.0" height="305.0"/>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>data_pkg</seg>
+    </context>
+  </config>
+</diagram:Diagram>
